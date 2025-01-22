@@ -23,6 +23,7 @@ generateButton.addEventListener('click', () => {
     // pulisci la lista al click del bottone
     outputList.innerHTML = '';
     // svuota array emails
+    const mailsArray = [];
 
 
     // cicla per ripetere la richiesta AJAX verso l'API per dieci volte
@@ -44,7 +45,7 @@ generateButton.addEventListener('click', () => {
 
                 // logga array per debug
                 console.log(mailsArray);
-                
+
 
                 // popola la lista in pagina
                 outputList.innerHTML += `
@@ -62,6 +63,14 @@ generateButton.addEventListener('click', () => {
         `;
             });
     }
+
+    // logga separatore
+    console.log('_____________');
+    console.log('NUOVO CICLO');
+    console.log('_____________');
+
 });
+
+
 
 
