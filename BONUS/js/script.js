@@ -1,34 +1,53 @@
+// Descrizione
+// Attraverso l’apposita API di Boolean
+//  https://flynn.boolean.careers/exercises/api/random/mail
+// generare 10 indirizzi email e stamparli in pagina all’interno di una lista.
+// Bonus
+// Abbellire con CSS o Bootstrap
+// Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le altre)
+
+
 // seleziona gli elementi del DOM
 const outputList = document.getElementById('list');
+const generateButton = document.getElementById('button');
 
-// inizializzo e valorizzo l'endpoint
+// definisci l'endpoint dell'API
 const apiEndpoint = 'https://flynn.boolean.careers/exercises/api/random/mail';
 
-// cicla per ripetere la richiesta AJAX verso l'API per dieci volte
-for (i = 0; i < 10; i++){
+// aggiungi un event listener al bottone di refresh
+generateButton.addEventListener('click', () => {
+    // pulisci la lista al click del bottone
+    outputList.innerHTML = '';
 
-    // invia la richiesta AJAX
-    axios.get(apiEndpoint)
-    .then(responseObj => {
+    // cicla per ripetere la richiesta AJAX verso l'API per dieci volte
+    for (let i = 0; i < 10; i++) {
 
-        // recupera la mail dalla risposta
-        const email = responseObj.data.response;
+        // invia la richiesta al'API
+        axios.get(apiEndpoint)
+            .then(responseObj => {
 
-        console.log(email);
+                // recupera la mail dalla risposta dell'API
+                const email = responseObj.data.response;
 
-        // popolo la lista nel DOM
-        outputList.innerHTML +=`
-        <li>${email}</li>
-        `;
-    })
+                // logga emails per debugging
+                console.log(email);
 
-    .catch(function (error) {
-        // gestisci errori nella richiesta
-        console.error('Errore durante il recupero dell\'email:', error);
-        // popolo la lista nel DOM
-        outputList.innerHTML =`
+                // popola la lista in pagina
+                outputList.innerHTML += `
+                <li>${email}</li>
+                `;
+            })
+
+            .catch(function (error) {
+                // gestisci eventuali errori nella richiesta
+                console.error('Errore durante il recupero dell\'email:', error);
+
+                // aggiungi messaggio di errore in pagina
+                outputList.innerHTML = `
         <li>404 | NOT FOUND</li>
         `;
-      });
+            });
+    }
+});
 
-};
+
