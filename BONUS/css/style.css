@@ -36,8 +36,8 @@ body {
     line-height: 36px;
     font-weight: 600;
     position: absolute;
-    top: 40%;
-    left: 50px;
+    top: 35%;
+    left: 60px;
     padding: 30px;
     cursor: pointer;
     border-radius: 15px;
@@ -49,8 +49,8 @@ body {
 
 #list {
     position: absolute;
-    left: 330px;
-    margin-top: 50px;
+    left: 350px;
+    margin-top: 60px;
 }
 
 #list li {

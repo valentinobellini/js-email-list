@@ -2,6 +2,7 @@
 // Attraverso l’apposita API di Boolean
 //  https://flynn.boolean.careers/exercises/api/random/mail
 // generare 10 indirizzi email e stamparli in pagina all’interno di una lista.
+
 // Bonus
 // Abbellire con CSS o Bootstrap
 // Inserire un bottone che al click faccia il fetch altre 10 mail (sostituendo le altre)
@@ -29,7 +30,7 @@ generateButton.addEventListener('click', () => {
     // cicla per ripetere la richiesta AJAX verso l'API per dieci volte
     for (let i = 0; i < 10; i++) {
 
-        // invia la richiesta al'API
+        // invia la richiesta all'API
         axios.get(apiEndpoint)
             .then(responseObj => {
 
@@ -65,9 +66,9 @@ generateButton.addEventListener('click', () => {
     }
 
     // logga separatore
-    console.log('_____________');
+    console.log('-------------');
     console.log('NUOVO CICLO');
-    console.log('_____________');
+    console.log('-------------');
 
 });
 
