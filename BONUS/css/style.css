@@ -12,6 +12,9 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #97C8EB;
+    background-image: url(../img/Senza\ titolo-2.png);
+    background-size: 150px;
+    /* background-repeat: no-repeat; */
 }
 
 
