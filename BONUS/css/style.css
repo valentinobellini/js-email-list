@@ -22,6 +22,8 @@ body {
     width: 720px;
     height: 440px;
     position: relative;
+    margin-top: 70px;
+
 
     border-radius: 15px;
     /* background: #F7EF81; */
