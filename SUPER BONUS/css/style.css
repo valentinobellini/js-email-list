@@ -12,40 +12,49 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #97C8EB;
+    background-image: url(../../BONUS/img/Senza\ titolo-2.png);
+    background-size: 150px;
+    /* background-repeat: no-repeat; */
 }
 
 
 #container {
-    width: 700px;
-    height: 420px;
+    width: 720px;
+    height: 440px;
     position: relative;
 
     border-radius: 15px;
-    background: #F7EF81;
-    box-shadow:  5px 5px 2px #ded774,
-                 -5px -5px 2px #ffff8e;
+    /* background: #F7EF81; */
+    background-image: url(../../BONUS/img/Senza\ titolo-4.png);
+    /* box-shadow:  5px 5px 2px #ded774,
+                 -5px -5px 2px #ffff8e; */
 }
 
 
 #button {
-    font-family: 'Karla', sans-serif;
-    font-size: 20px;
-    font-weight: 900;
+    width: 210px;
+    height: 105px;
+    font-family: 'Dokdo', sans-serif;
+    font-size: 25px;
+    line-height: 36px;
+    font-weight: 600;
     position: absolute;
-    top: 40%;
-    left: 50px;
+    top: 35%;
+    left: 60px;
     padding: 30px;
     cursor: pointer;
     border-radius: 15px;
-    background: #D88C9A;
+    background-image: url(../../BONUS/img/Senza\ titolo-1.png);
+    user-select: none;
+    /* background: #D88C9A;
     box-shadow:  5px 5px 2px #c27e8b,
-                 -5px -5px 2px #ee9aa9;
+                 -5px -5px 2px #ee9aa9; */
 }
 
 #list {
     position: absolute;
-    left: 330px;
-    margin-top: 50px;
+    left: 350px;
+    margin-top: 60px;
 }
 
 #list li {

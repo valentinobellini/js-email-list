@@ -45,6 +45,7 @@ body {
     cursor: pointer;
     border-radius: 15px;
     background-image: url(../img/Senza\ titolo-1.png);
+    user-select: none;
     /* background: #D88C9A;
     box-shadow:  5px 5px 2px #c27e8b,
                  -5px -5px 2px #ee9aa9; */
