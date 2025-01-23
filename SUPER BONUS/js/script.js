@@ -11,15 +11,23 @@
 const outputList = document.getElementById('list');
 const generateButton = document.getElementById('button');
 
+
 // definisci l'endpoint dell'API
 const apiEndpoint = 'https://flynn.boolean.careers/exercises/api/random/mail';
 
 // inizializza un array vuoto in cui salvare le mail
 let mailsArray = [];
 
-// aggiungi un event listener al bottone di refresh
-generateButton.addEventListener('click', () => {
+generateList();
 
+// aggiungi un event listener al bottone di refresh
+generateButton.addEventListener('click', generateList);
+
+
+
+
+// funzione
+function generateList() {
     // pulisci la lista al click del bottone
     outputList.innerHTML = '';
     // svuota array emails al click del bottone
@@ -47,11 +55,11 @@ generateButton.addEventListener('click', () => {
 
                 // solo quando l'array contiene 10 mail
                 if (mailsArray.length == 10) {
-                    // popola la lista in pagina
+                    // popola la lista in pagina ciclando tra gli indici dell'array
                     for (let i = 0; i < 10; i++) {
-                        outputList.innerHTML +=`
-                            <li>${mailsArray[i]}</li>
-                            `;
+                        outputList.innerHTML += `
+                                <li>${mailsArray[i]}</li>
+                                `;
                     }
 
                 }
@@ -63,11 +71,9 @@ generateButton.addEventListener('click', () => {
                 console.error('Errore durante il recupero dell\'email:', error);
 
                 // aggiungi messaggio di errore in pagina
-                outputList.innerHTML =`
-                    <li>404 | NOT FOUND</li>
-                    `;
+                outputList.innerHTML = `
+                        <li>404 | NOT FOUND</li>
+                        `;
             });
     }
-});
-
-
+};
