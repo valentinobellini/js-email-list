@@ -23,6 +23,10 @@ for (i = 0; i < 10; i++){
         // recupera la mail dalla risposta
         const email = responseObj.data.response;
 
+        // logga oggetto di risposta per debug
+        console.log(responseObj);
+        
+        // logga email per debug
         console.log(email);
 
         // popolo la lista nel DOM
